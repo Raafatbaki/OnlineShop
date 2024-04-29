@@ -25,7 +25,6 @@ class ProductFactory extends Factory
             'description' => $this->faker->paragraph,
             'stock' => $this->faker->numberBetween(0, 100),
             'price' => $this->faker->randomFloat(2, 10, 1000),
-            'quantity' => $this->faker->numberBetween(1, 20),
             'product_image' => $this->faker->imageUrl(640, 480, 'products', true),
             'status' => $this->faker->randomElement(['active','draft',"archvied"]),
             'category_id' =>Category::inRandomOrder()->first()->id,

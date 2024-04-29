@@ -45,4 +45,19 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    // في App\Exceptions\Handler
+
+    public function render($request, Throwable $exception)
+    {
+        if ($request->expectsJson() ) {
+            return response()->json([
+                'error' => $exception->getMessage(),
+
+            ], $exception->status ?? 422);
+        }
+
+        return parent::render($request, $exception);
+    }
+
 }

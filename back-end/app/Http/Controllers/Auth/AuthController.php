@@ -80,7 +80,7 @@ class AuthController extends Controller
             $profile = new Profile([
                 'first_name' => $request->first_name,
                 'last_name' => $request->last_name,
-                'birthday' =>  DateTime::createFromFormat('m/d/Y', $request->birthday),
+                'birthday' => $request->birthday,
                 'gender' => $request->gender,
                 'street_address' => $request->street_address,
                 'city' => $request->city,

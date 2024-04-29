@@ -9,6 +9,14 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Dashboard from "./Pages/Dashboard/Dashboard.js";
 import Authrequired from "./Pages/Auth/Authrequired.js";
 import UserProfile from "./Pages/Dashboard/UserProfile";
+import AddProducts from "./Pages/Dashboard/Products/AddProducts.js";
+import Product from "./Pages/Dashboard/Products/Products.js";
+import Category from "./Pages/Dashboard/Categories/Categories.js";
+import Order from "./Pages/Dashboard/Oreders.js";
+import CreateCategory from "./Pages/Dashboard/Categories/CreateCategory.js";
+import EditCategory from "./Pages/Dashboard/Categories/EditCategory.js";
+import ProductDetails from "./Pages/Dashboard/Products/ProductDetails.js";
+import EditProduct from "./Pages/Dashboard/Products/EditProduct.js";
 function App() {
   return (
     <div className="App">
@@ -23,6 +31,14 @@ function App() {
         <Route element={<Authrequired />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="users" element={<User />}></Route>
+            <Route path="categories" element={<Category />}></Route>
+            <Route path="Add-category" element={<CreateCategory />}></Route>
+            <Route path="editCategory/:id" element={<EditCategory />}></Route>
+            <Route path="orders" element={<Order />}></Route>
+            <Route path="products" element={<Product />}></Route>
+            <Route path="product-edit/:id" element={<EditProduct />}></Route>
+            <Route path="productsDetails" element={<ProductDetails />}></Route>
+            <Route path="Add-products" element={<AddProducts />}></Route>
             <Route path="userProfile/:id" element={<UserProfile />}></Route>
           </Route>
         </Route>

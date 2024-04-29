@@ -35,7 +35,7 @@ export default function Authrequired() {
         navigate("/loginAdmin", { replace: true });
       }
     };
-    console.log("ASdsad");
+
     fetchData();
   }, []);
 

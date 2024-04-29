@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Auth.css";
 import axios from "axios";
 import { LOGINUSER, baseUrl } from "../../Api/Api";
@@ -32,11 +32,15 @@ export default function LoginUser() {
       Setloading(false);
     } catch (error) {
       Setloading(false);
-      if (error.response.status === 422) {
-        setErrorLogin(error.response.data.message);
-      }
+
+      setErrorLogin(error.response.data.message);
     }
   }
+  const focus = useRef();
+
+  useEffect(() => {
+    focus.current.focus();
+  }, []);
   return (
     <>
       {loading && <Loading />}
@@ -52,6 +56,7 @@ export default function LoginUser() {
               name="email"
               onChange={changehandle}
               required
+              ref={focus}
             />
           </div>
           <div className="form-group">

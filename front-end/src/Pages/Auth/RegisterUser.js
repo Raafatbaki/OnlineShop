@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { baseUrl, REGISTER } from "../../Api/Api";
 import "./Auth.css";
 import Loading from "../../components/Loading/Loading";
@@ -21,30 +22,42 @@ export default function Register() {
     postal_code: "",
     country: "",
   });
-
+  const navigate = useNavigate();
   function changhandle(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
+    console.log(e.target.value);
   }
 
   async function submithandle(e) {
     e.preventDefault();
 
     Setloading(true);
-
+    seterrorRegister("");
+    console.log("form");
+    console.log(form);
+    console.log("seterrorRegister");
     try {
       var result = await axios.post(`${baseUrl}/${REGISTER}`, form);
       if (result.status === 200) {
         Setloading(false);
+        setForm({});
+        seterrorRegister();
+        navigate("/", { replace: true });
       }
-      setForm({});
     } catch (error) {
-      console.log(error, "hvhjvjj");
+      console.log(form.birthday);
       seterrorRegister(error.response.data.errors);
       Setloading(false);
+      console.log(form);
       if (error.response.status === 400) {
       }
     }
   }
+  const focus = useRef();
+
+  useEffect(() => {
+    focus.current.focus();
+  }, []);
   return (
     <>
       {loading && <Loading />}
@@ -72,8 +85,11 @@ export default function Register() {
                     type="text"
                     id="username"
                     name="username"
+                    value={form.username}
                     onChange={changhandle}
                     className="form-control"
+                    required
+                    ref={focus}
                   />
                 </div>
                 <div className="form-group">
@@ -82,6 +98,7 @@ export default function Register() {
                     type="email"
                     id="email"
                     name="email"
+                    value={form.email}
                     onChange={changhandle}
                     className="form-control"
                     required
@@ -95,6 +112,7 @@ export default function Register() {
                     type="password"
                     id="password"
                     name="password"
+                    value={form.password}
                     onChange={changhandle}
                     className="form-control"
                     required
@@ -112,6 +130,7 @@ export default function Register() {
                     type="text"
                     id="first_name"
                     name="first_name"
+                    value={form.first_name}
                     onChange={changhandle}
                     className="form-control"
                     required
@@ -125,6 +144,7 @@ export default function Register() {
                     type="text"
                     id="last_name"
                     name="last_name"
+                    value={form.last_name}
                     onChange={changhandle}
                     className="form-control"
                     required
@@ -139,6 +159,7 @@ export default function Register() {
                 type="date"
                 id="birthday"
                 name="birthday"
+                value={form.birthday}
                 onChange={changhandle}
                 className="form-control"
               />
@@ -150,6 +171,7 @@ export default function Register() {
                 id="gender"
                 name="gender"
                 className="form-control"
+                value={form.gender}
                 onChange={changhandle}
               >
                 <option value="">Select Gender</option>
@@ -164,6 +186,7 @@ export default function Register() {
                 type="text"
                 id="address"
                 name="address"
+                value={form.address}
                 onChange={changhandle}
                 className="form-control"
               />
@@ -177,6 +200,7 @@ export default function Register() {
                     type="text"
                     id="city"
                     name="city"
+                    value={form.city}
                     onChange={changhandle}
                     className="form-control"
                   />
@@ -189,6 +213,7 @@ export default function Register() {
                     type="text"
                     id="state"
                     name="state"
+                    value={form.state}
                     onChange={changhandle}
                     className="form-control"
                   />
@@ -203,6 +228,7 @@ export default function Register() {
                   <input
                     type="text"
                     id="postal_code"
+                    value={form.postal_code}
                     name="postal_code"
                     onChange={changhandle}
                     className="form-control"
@@ -216,6 +242,7 @@ export default function Register() {
                     type="text"
                     id="country"
                     name="country"
+                    value={form.country}
                     onChange={changhandle}
                     className="form-control"
                     maxLength="2"

@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="266066f0-d461-469a-80f2-f2ca9341a180" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OnlineShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlineShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Http/Controllers/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Http/Controllers/Auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/app/Models/Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/config/sanctum.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/config/sanctum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/database/factories/ProductFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +54,6 @@
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/back-end/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/deprecation-contracts" />
@@ -61,7 +76,6 @@
       <path value="$PROJECT_DIR$/back-end/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/back-end/vendor/dflydev/dot-access-data" />
       <path value="$PROJECT_DIR$/back-end/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/back-end/vendor/laravel/framework" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/backtrace" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/flare-client-php" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/ignition" />
@@ -134,6 +148,11 @@
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/gif" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/image-laravel" />
+      <path value="$PROJECT_DIR$/back-end/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/back-end/vendor/phpunit/phpunit" />
     </include_path>
   </component>
   <component name="ProjectId" id="2fPmEkLxncnAwkQYub2UsozGcQc" />
@@ -161,12 +180,15 @@
       <option name="presentableId" value="Default" />
       <updated>1713710979751</updated>
       <workItem from="1713710981667" duration="67023000" />
-      <workItem from="1713999691937" duration="20850000" />
+      <workItem from="1713999691937" duration="103610000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -190,6 +212,15 @@
             <option name="methodName" value="loginAdmin" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/back-end/app/Http/Controllers/Api/Dashboard/ProductsControler.php</url>
+          <line>154</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Api\Dashboard\ProductsControler" />
+            <option name="methodName" value="uploadMultiImages" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

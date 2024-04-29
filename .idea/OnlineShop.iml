@@ -18,7 +18,6 @@
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/event-dispatcher" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/event-dispatcher-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/finder" />
-      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/deprecation-contracts" />
@@ -41,7 +40,6 @@
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/dflydev/dot-access-data" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/egulias/email-validator" />
-      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/spatie/backtrace" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/spatie/flare-client-php" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/spatie/ignition" />
@@ -114,6 +112,11 @@
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/intervention/image" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/intervention/gif" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/intervention/image-laravel" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/phpunit/phpunit" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

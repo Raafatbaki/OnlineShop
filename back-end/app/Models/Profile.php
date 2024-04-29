@@ -40,7 +40,7 @@ class Profile extends Model
             'email' => ['required', 'email', Rule::unique('users', 'email')->ignore($id)],
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'birthday' => 'nullable|date',
+            'birthday' => 'required|date',
             'gender' => 'required|nullable|in:male,female',
             'address' => 'required|string',
             'city' => 'required|nullable|string',

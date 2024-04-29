@@ -18,7 +18,6 @@
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/back-end/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/deprecation-contracts" />
@@ -41,7 +40,6 @@
       <path value="$PROJECT_DIR$/back-end/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/back-end/vendor/dflydev/dot-access-data" />
       <path value="$PROJECT_DIR$/back-end/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/back-end/vendor/laravel/framework" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/backtrace" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/flare-client-php" />
       <path value="$PROJECT_DIR$/back-end/vendor/spatie/ignition" />
@@ -114,6 +112,11 @@
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/back-end/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/gif" />
+      <path value="$PROJECT_DIR$/back-end/vendor/intervention/image-laravel" />
+      <path value="$PROJECT_DIR$/back-end/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/back-end/vendor/phpunit/phpunit" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

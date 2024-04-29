@@ -5,7 +5,6 @@ import Sidebar from "../../components/Dashboard/Sidebar";
 import { Menu } from "../../Context/MenuContext";
 import "./dashboard.css";
 export default function Dashboard() {
-  console.log(Menu);
   return (
     <div className="">
       <Topbar />

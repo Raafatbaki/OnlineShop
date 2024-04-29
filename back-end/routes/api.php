@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Api\Dashboard\ProductImageController;
+use App\Http\Controllers\Api\Dashboard\ProductsControler;
 use App\Http\Controllers\Api\ProfileController;
 use App\Http\Controllers\Api\UsersContoller;
 use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\Dashboard\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +42,34 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/user/{id}', [UsersContoller::class, 'getUser']);
     Route::get('/userProfile/{id}', [ProfileController::class, 'getProfileById']);
     Route::put('/user/edit/{id}', [UsersContoller::class, 'editUser']);
+    Route::delete('/user/delete/{id}', [UsersContoller::class, 'destroy']);
     Route::put('/profile/edit/{id}',[ProfileController::class,"updateProfileById"]);
-    Route::delete('/user/{id}', [UsersContoller::class, 'destroy']);
+
 });
 
+//protected linke for Categories
+Route::middleware(['auth:admin','forceJson'])->group(function () {
+
+    Route::get('/admin/categories',[CategoriesController::class,'index']);
+    Route::post('/admin/addcategory',[CategoriesController::class,'store']);
+    Route::get('/admin/category/{id}',[CategoriesController::class,'getcategoryById']);
+    Route::post('/admin/categoryEdit/{id}',[CategoriesController::class,'updateCategoryById']);
+    Route::Delete('/admin/categories/delete/{id}',[CategoriesController::class,'destroy']);
+
+});
+//protected linke for products
+Route::middleware('auth:admin')->group(function () {
+
+    Route::get('/admin/products',[ProductsControler::class,'index']);
+    Route::post('/admin/products/add',[ProductsControler::class,'store']);
+    Route::get('/admin/product/{id}',[ProductsControler::class,'show']);
+    Route::post('/admin/products/edit/{id}',[ProductsControler::class,'edit']);
+    Route::delete('/admin/products/delete/{id}',[ProductsControler::class,'destroy']);
+});
+Route::middleware('auth:admin')->controller(ProductImageController::class)->group(function () {
+    Route::post('/product-img/add', 'store');
+    Route::delete('admin/product-foto-delete/{id}', 'destroy');
+});
 // Protected Routes for User
 Route::middleware('auth:user')->group(function () {
     Route::post('/logoutUser', [AuthController::class, 'logoutUser']);

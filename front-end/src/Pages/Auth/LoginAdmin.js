@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { LOGINADMIN, baseUrl } from "../../Api/Api";
 import Loading from "../../components/Loading/Loading";
 import Cookie from "cookie-universal";
@@ -13,6 +13,11 @@ export default function LoginAdmin() {
   const [loading, Setloading] = useState(false);
   const [errorLogin, setErrorLogin] = useState("");
   const navigate = useNavigate();
+  const focus = useRef();
+
+  useEffect(() => {
+    focus.current.focus();
+  }, []);
   function changehandle(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -27,7 +32,7 @@ export default function LoginAdmin() {
       const token = result.data.token;
       const cookies = Cookie();
       cookies.set("admin-token", token);
-      navigate("/dashboard");
+      window.location.pathname = "/dashboard";
       Setloading(false);
     } catch (error) {
       console.log(error);
@@ -61,6 +66,7 @@ export default function LoginAdmin() {
               name="email"
               onChange={changehandle}
               required
+              ref={focus}
             />
           </div>
           <div className="form-group mt-2">
